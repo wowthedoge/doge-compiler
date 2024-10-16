@@ -1,0 +1,3 @@
+/home/hong/codeprojects/doge-compiler/build/CMakeFiles/doge.dir
+/home/hong/codeprojects/doge-compiler/build/CMakeFiles/edit_cache.dir
+/home/hong/codeprojects/doge-compiler/build/CMakeFiles/rebuild_cache.dir

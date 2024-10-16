@@ -8,7 +8,7 @@
 #include "tokenization.hpp"
 
 
-int main(int argc, char *argv[])
+int v1main(int argc, char *argv[])
 {
     if (argc != 2)
     {
@@ -40,10 +40,3 @@ int main(int argc, char *argv[])
     return EXIT_SUCCESS;
 }
 
-/*
-myList.loop(elem, i => {
-
-
-})
-
-*/

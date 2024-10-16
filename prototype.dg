@@ -1,9 +1,4 @@
-# doge-compiler
 
-A compiler written in C++ for learning. Using ANTLR for lexing and parsing and LLVM for code generation.
-
-Target syntax:
-```
 arr = [1,2,3,4,5]
 
 printOddAddEven = (arr) {
@@ -22,5 +17,3 @@ printOddAddEven = (arr) {
 }
 
 printOddAddEven (arr)
-```
-
