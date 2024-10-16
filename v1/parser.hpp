@@ -12,7 +12,7 @@ struct NodeExpr
 struct NodeExit
 {
     NodeExpr expr;
-}
+};
 
 class Parser
 {
@@ -24,7 +24,7 @@ public:
 
     std::optional<NodeExpr> parse_expr()
     {
-        if (peak().has_value() && peak().value().type == TokenType::int_lit)
+        if (peek().has_value() && peek().value().type == TokenType::int_lit)
         {
             return NodeExpr{
                 .int_lit = consume()};
@@ -38,10 +38,11 @@ public:
     std::optional<NodeExit> parse()
     {
         std::optional<NodeExit> exit_node;
-        while (peak().has_value())
+        while (peek().has_value())
         {
-            if (peak().value().type == TokenType::exit)
+            if (peek().value().type == TokenType::exit)
             {
+                consume(); // Consume the 'exit' token
                 if (auto node_expr = parse_expr())
                 {
                     exit_node = NodeExit{.expr = node_expr.value()};
@@ -51,35 +52,40 @@ public:
                     std::cerr << "Invalid expression" << std::endl;
                     exit(EXIT_FAILURE);
                 }
-                if (!peak().has_value() || peak().value().type != TokenType::semi)
+                if (!peek().has_value() || peek().value().type != TokenType::semi)
                 {
                     std::cerr << "Invalid expression" << std::endl;
                     exit(EXIT_FAILURE);
                 }
+                consume(); // Consume the semicolon
+            }
+            else
+            {
+                std::cerr << "Unexpected token" << std::endl;
+                exit(EXIT_FAILURE);
             }
         }
-        m_index = 0;
         return exit_node;
     }
 
 private:
-    inline std::optional<Token> peak(int ahead = 1) const
+    inline std::optional<Token> peek(int ahead = 0) const
     {
-        if (m_index + ahead > m_src.length())
+        if (m_index + ahead >= m_tokens.size())
         {
             return {};
         }
         else
         {
-            return m_src.at(m_index);
+            return m_tokens.at(m_index + ahead);
         }
     }
 
     Token consume()
     {
-        return m_src.at(m_index++);
+        return m_tokens.at(m_index++);
     }
 
-    const std::string m_src;
-    int m_index = 0;
-}
+    const std::vector<Token> m_tokens;
+    size_t m_index = 0;
+};
