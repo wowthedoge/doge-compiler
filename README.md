@@ -24,5 +24,5 @@ printOddAddEven = (arr) {
 printOddAddEven (arr)
 ```
 
-Why is there more Makefile than C++? Because I bit off more than I could chew. Damn. I'm not giving up, I'm coming back another time. I need to properly learn C++ before this shit. Jesus Christ.
+18/10/2024: Why is there more Makefile than C++? Because I bit off more than I could chew. Damn. I'm not giving up, I'm coming back another time. I need to properly learn C++ before this shit. Jesus Christ.
 
