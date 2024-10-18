@@ -69,10 +69,42 @@ include CMakeFiles/doge.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/doge.dir/flags.make
 
+antlr4cpp_generated_src/dogeLexer/dogeLexer.interp: /home/hong/codeprojects/doge-compiler/dogeLexer.g4
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hong/codeprojects/doge-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building DogeLanguageLexer with ANTLR 4.13.2"
+	cd /home/hong/codeprojects/doge-compiler && /usr/bin/java -jar /home/hong/codeprojects/doge-compiler/antlr-4.13.2-complete.jar dogeLexer.g4 -o /home/hong/codeprojects/doge-compiler/build/antlr4cpp_generated_src/dogeLexer -no-listener -Dlanguage=Cpp
+
+antlr4cpp_generated_src/dogeLexer/dogeLexer.tokens: antlr4cpp_generated_src/dogeLexer/dogeLexer.interp
+	@$(CMAKE_COMMAND) -E touch_nocreate antlr4cpp_generated_src/dogeLexer/dogeLexer.tokens
+
+antlr4cpp_generated_src/dogeLexer/dogeLexer.h: antlr4cpp_generated_src/dogeLexer/dogeLexer.interp
+	@$(CMAKE_COMMAND) -E touch_nocreate antlr4cpp_generated_src/dogeLexer/dogeLexer.h
+
+antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp: antlr4cpp_generated_src/dogeLexer/dogeLexer.interp
+	@$(CMAKE_COMMAND) -E touch_nocreate antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp
+
+generated/dogeGrammarLexer.interp: /home/hong/codeprojects/doge-compiler/dogeGrammar.g4
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/hong/codeprojects/doge-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CustomLanguageGrammar with ANTLR 4.13.2"
+	cd /home/hong/codeprojects/doge-compiler && /usr/bin/java -jar /home/hong/codeprojects/doge-compiler/antlr-4.13.2-complete.jar dogeGrammar.g4 -o /home/hong/codeprojects/doge-compiler/build/generated -no-listener -Dlanguage=Cpp -package customlanguage
+
+generated/dogeGrammarLexer.tokens: generated/dogeGrammarLexer.interp
+	@$(CMAKE_COMMAND) -E touch_nocreate generated/dogeGrammarLexer.tokens
+
+generated/dogeGrammarLexer.h: generated/dogeGrammarLexer.interp
+	@$(CMAKE_COMMAND) -E touch_nocreate generated/dogeGrammarLexer.h
+
+generated/dogeGrammarLexer.cpp: generated/dogeGrammarLexer.interp
+	@$(CMAKE_COMMAND) -E touch_nocreate generated/dogeGrammarLexer.cpp
+
+generated/dogeGrammarParser.h: generated/dogeGrammarLexer.interp
+	@$(CMAKE_COMMAND) -E touch_nocreate generated/dogeGrammarParser.h
+
+generated/dogeGrammarParser.cpp: generated/dogeGrammarLexer.interp
+	@$(CMAKE_COMMAND) -E touch_nocreate generated/dogeGrammarParser.cpp
+
 CMakeFiles/doge.dir/main.cpp.o: CMakeFiles/doge.dir/flags.make
 CMakeFiles/doge.dir/main.cpp.o: /home/hong/codeprojects/doge-compiler/main.cpp
 CMakeFiles/doge.dir/main.cpp.o: CMakeFiles/doge.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hong/codeprojects/doge-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/doge.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hong/codeprojects/doge-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/doge.dir/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/doge.dir/main.cpp.o -MF CMakeFiles/doge.dir/main.cpp.o.d -o CMakeFiles/doge.dir/main.cpp.o -c /home/hong/codeprojects/doge-compiler/main.cpp
 
 CMakeFiles/doge.dir/main.cpp.i: cmake_force
@@ -83,17 +115,66 @@ CMakeFiles/doge.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/doge.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hong/codeprojects/doge-compiler/main.cpp -o CMakeFiles/doge.dir/main.cpp.s
 
+CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.o: CMakeFiles/doge.dir/flags.make
+CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.o: antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp
+CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.o: CMakeFiles/doge.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hong/codeprojects/doge-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.o -MF CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.o.d -o CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.o -c /home/hong/codeprojects/doge-compiler/build/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp
+
+CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hong/codeprojects/doge-compiler/build/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp > CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.i
+
+CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hong/codeprojects/doge-compiler/build/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp -o CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.s
+
+CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.o: CMakeFiles/doge.dir/flags.make
+CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.o: generated/dogeGrammarLexer.cpp
+CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.o: CMakeFiles/doge.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hong/codeprojects/doge-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.o -MF CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.o.d -o CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.o -c /home/hong/codeprojects/doge-compiler/build/generated/dogeGrammarLexer.cpp
+
+CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hong/codeprojects/doge-compiler/build/generated/dogeGrammarLexer.cpp > CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.i
+
+CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hong/codeprojects/doge-compiler/build/generated/dogeGrammarLexer.cpp -o CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.s
+
+CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.o: CMakeFiles/doge.dir/flags.make
+CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.o: generated/dogeGrammarParser.cpp
+CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.o: CMakeFiles/doge.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hong/codeprojects/doge-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.o -MF CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.o.d -o CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.o -c /home/hong/codeprojects/doge-compiler/build/generated/dogeGrammarParser.cpp
+
+CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hong/codeprojects/doge-compiler/build/generated/dogeGrammarParser.cpp > CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.i
+
+CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hong/codeprojects/doge-compiler/build/generated/dogeGrammarParser.cpp -o CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.s
+
 # Object files for target doge
 doge_OBJECTS = \
-"CMakeFiles/doge.dir/main.cpp.o"
+"CMakeFiles/doge.dir/main.cpp.o" \
+"CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.o" \
+"CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.o" \
+"CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.o"
 
 # External object files for target doge
 doge_EXTERNAL_OBJECTS =
 
 doge: CMakeFiles/doge.dir/main.cpp.o
+doge: CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.o
+doge: CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.o
+doge: CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.o
 doge: CMakeFiles/doge.dir/build.make
+doge: antlr4_runtime/src/antlr4_runtime/runtime/Cpp/runtime/libantlr4-runtime.a
 doge: CMakeFiles/doge.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hong/codeprojects/doge-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable doge"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hong/codeprojects/doge-compiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable doge"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/doge.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -104,7 +185,16 @@ CMakeFiles/doge.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/doge.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/doge.dir/clean
 
-CMakeFiles/doge.dir/depend:
+CMakeFiles/doge.dir/depend: antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp
+CMakeFiles/doge.dir/depend: antlr4cpp_generated_src/dogeLexer/dogeLexer.h
+CMakeFiles/doge.dir/depend: antlr4cpp_generated_src/dogeLexer/dogeLexer.interp
+CMakeFiles/doge.dir/depend: antlr4cpp_generated_src/dogeLexer/dogeLexer.tokens
+CMakeFiles/doge.dir/depend: generated/dogeGrammarLexer.cpp
+CMakeFiles/doge.dir/depend: generated/dogeGrammarLexer.h
+CMakeFiles/doge.dir/depend: generated/dogeGrammarLexer.interp
+CMakeFiles/doge.dir/depend: generated/dogeGrammarLexer.tokens
+CMakeFiles/doge.dir/depend: generated/dogeGrammarParser.cpp
+CMakeFiles/doge.dir/depend: generated/dogeGrammarParser.h
 	cd /home/hong/codeprojects/doge-compiler/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hong/codeprojects/doge-compiler /home/hong/codeprojects/doge-compiler /home/hong/codeprojects/doge-compiler/build /home/hong/codeprojects/doge-compiler/build /home/hong/codeprojects/doge-compiler/build/CMakeFiles/doge.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/doge.dir/depend
 

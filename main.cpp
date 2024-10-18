@@ -2,11 +2,9 @@
 
 #include <iostream>
 #include <fstream>
-#include <sstream>
-#include <vector>
-#include <optional>
-#include "tokenization.hpp"
-
+#include "antlr4-runtime.h"
+#include "./generated/DogeGrammarLexer.h"
+// #include "./generated/MyLanguageParser.h"
 
 int main(int argc, char *argv[])
 {
@@ -17,25 +15,29 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
 
-    std::string contents;
-    {
-        std::stringstream contents_stream;
-        std::fstream input(argv[1], std::ios::in);
-        contents_stream << input.rdbuf();
-        contents = contents_stream.str();
+    // std::string contents;
+    // {
+    //     std::stringstream contents_stream;
+    //     std::fstream input(argv[1], std::ios::in);
+    //     contents_stream << input.rdbuf();
+    //     contents = contents_stream.str();
+    // }
+
+    std::ifstream stream;
+    stream.open(argv[1]);
+    if (!stream.is_open()) {
+        std::cerr << "Cannot open file: " << argv[1] << std::endl;
+        return 1;
     }
 
-    Tokenizer tokenizer(std::move(contents));
-    std::vector<Token> tokens = tokenizer.tokenize();
-    std::cout << tokens_to_asm(tokens) << std::endl;
+    std::stringstream string_stream;
+    string_stream << stream.rdbuf();
+    std::string contents = string_stream.str();
+    std::cout << contents << std::endl;
+
+    antlr4::ANTLRInputStream input(stream);
+    std::cout << "Input: " << input.toString() << std::endl;
     
-    {
-        std::fstream file("./out.asm", std::ios::out);
-        file << tokens_to_asm(tokens);
-    }
-
-    system("nasm -felf64 out.asm");
-    system("ld -o out out.o");
 
     return EXIT_SUCCESS;
 }

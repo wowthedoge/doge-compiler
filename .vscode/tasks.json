@@ -4,7 +4,7 @@
         {
             "type": "shell",
             "label": "build and run",
-            "command": "cmake --build build && ./build/doge ./test.dg",
+            "command": "cmake --build build && ./build/doge ./prototype.dg",
             "group": "build",
             "problemMatcher": [
                 "$gcc"

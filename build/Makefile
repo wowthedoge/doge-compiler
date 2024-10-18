@@ -117,6 +117,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named antlr4_runtime
+
+# Build rule for target.
+antlr4_runtime: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 antlr4_runtime
+.PHONY : antlr4_runtime
+
+# fast build rule for target.
+antlr4_runtime/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/antlr4_runtime.dir/build.make CMakeFiles/antlr4_runtime.dir/build
+.PHONY : antlr4_runtime/fast
+
+#=============================================================================
+# Target rules for targets named antlr4_runtime-build_static
+
+# Build rule for target.
+antlr4_runtime-build_static: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 antlr4_runtime-build_static
+.PHONY : antlr4_runtime-build_static
+
+# fast build rule for target.
+antlr4_runtime-build_static/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/antlr4_runtime-build_static.dir/build.make CMakeFiles/antlr4_runtime-build_static.dir/build
+.PHONY : antlr4_runtime-build_static/fast
+
+#=============================================================================
+# Target rules for targets named antlr4_runtime-build_shared
+
+# Build rule for target.
+antlr4_runtime-build_shared: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 antlr4_runtime-build_shared
+.PHONY : antlr4_runtime-build_shared
+
+# fast build rule for target.
+antlr4_runtime-build_shared/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/antlr4_runtime-build_shared.dir/build.make CMakeFiles/antlr4_runtime-build_shared.dir/build
+.PHONY : antlr4_runtime-build_shared/fast
+
+#=============================================================================
 # Target rules for targets named doge
 
 # Build rule for target.
@@ -128,6 +167,78 @@ doge: cmake_check_build_system
 doge/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/doge.dir/build.make CMakeFiles/doge.dir/build
 .PHONY : doge/fast
+
+antlr4cpp_generated_src/dogeLexer/dogeLexer.o: antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.o
+.PHONY : antlr4cpp_generated_src/dogeLexer/dogeLexer.o
+
+# target to build an object file
+antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doge.dir/build.make CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.o
+.PHONY : antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.o
+
+antlr4cpp_generated_src/dogeLexer/dogeLexer.i: antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.i
+.PHONY : antlr4cpp_generated_src/dogeLexer/dogeLexer.i
+
+# target to preprocess a source file
+antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doge.dir/build.make CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.i
+.PHONY : antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.i
+
+antlr4cpp_generated_src/dogeLexer/dogeLexer.s: antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.s
+.PHONY : antlr4cpp_generated_src/dogeLexer/dogeLexer.s
+
+# target to generate assembly for a file
+antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doge.dir/build.make CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.s
+.PHONY : antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.s
+
+generated/dogeGrammarLexer.o: generated/dogeGrammarLexer.cpp.o
+.PHONY : generated/dogeGrammarLexer.o
+
+# target to build an object file
+generated/dogeGrammarLexer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doge.dir/build.make CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.o
+.PHONY : generated/dogeGrammarLexer.cpp.o
+
+generated/dogeGrammarLexer.i: generated/dogeGrammarLexer.cpp.i
+.PHONY : generated/dogeGrammarLexer.i
+
+# target to preprocess a source file
+generated/dogeGrammarLexer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doge.dir/build.make CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.i
+.PHONY : generated/dogeGrammarLexer.cpp.i
+
+generated/dogeGrammarLexer.s: generated/dogeGrammarLexer.cpp.s
+.PHONY : generated/dogeGrammarLexer.s
+
+# target to generate assembly for a file
+generated/dogeGrammarLexer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doge.dir/build.make CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.s
+.PHONY : generated/dogeGrammarLexer.cpp.s
+
+generated/dogeGrammarParser.o: generated/dogeGrammarParser.cpp.o
+.PHONY : generated/dogeGrammarParser.o
+
+# target to build an object file
+generated/dogeGrammarParser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doge.dir/build.make CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.o
+.PHONY : generated/dogeGrammarParser.cpp.o
+
+generated/dogeGrammarParser.i: generated/dogeGrammarParser.cpp.i
+.PHONY : generated/dogeGrammarParser.i
+
+# target to preprocess a source file
+generated/dogeGrammarParser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doge.dir/build.make CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.i
+.PHONY : generated/dogeGrammarParser.cpp.i
+
+generated/dogeGrammarParser.s: generated/dogeGrammarParser.cpp.s
+.PHONY : generated/dogeGrammarParser.s
+
+# target to generate assembly for a file
+generated/dogeGrammarParser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doge.dir/build.make CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.s
+.PHONY : generated/dogeGrammarParser.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -161,7 +272,19 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... antlr4_runtime"
+	@echo "... antlr4_runtime-build_shared"
+	@echo "... antlr4_runtime-build_static"
 	@echo "... doge"
+	@echo "... antlr4cpp_generated_src/dogeLexer/dogeLexer.o"
+	@echo "... antlr4cpp_generated_src/dogeLexer/dogeLexer.i"
+	@echo "... antlr4cpp_generated_src/dogeLexer/dogeLexer.s"
+	@echo "... generated/dogeGrammarLexer.o"
+	@echo "... generated/dogeGrammarLexer.i"
+	@echo "... generated/dogeGrammarLexer.s"
+	@echo "... generated/dogeGrammarParser.o"
+	@echo "... generated/dogeGrammarParser.i"
+	@echo "... generated/dogeGrammarParser.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
