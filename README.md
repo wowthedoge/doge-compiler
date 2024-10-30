@@ -1,6 +1,6 @@
 # doge-compiler
 
-A compiler written in C++ for learning. Using ANTLR for lexing and parsing and LLVM for code generation.
+A compiler written in C++ for learning. Using Flex for lexing, Bison for parsing and LLVM for code generation.
 
 Target syntax:
 ```
