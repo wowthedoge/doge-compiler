@@ -1,6 +1,0 @@
-/home/hong/codeprojects/doge-compiler/build/CMakeFiles/antlr4_runtime.dir
-/home/hong/codeprojects/doge-compiler/build/CMakeFiles/antlr4_runtime-build_static.dir
-/home/hong/codeprojects/doge-compiler/build/CMakeFiles/antlr4_runtime-build_shared.dir
-/home/hong/codeprojects/doge-compiler/build/CMakeFiles/doge.dir
-/home/hong/codeprojects/doge-compiler/build/CMakeFiles/edit_cache.dir
-/home/hong/codeprojects/doge-compiler/build/CMakeFiles/rebuild_cache.dir

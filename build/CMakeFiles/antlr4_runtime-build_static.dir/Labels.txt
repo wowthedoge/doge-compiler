@@ -1,6 +1,0 @@
-# Target labels
- antlr4_runtime
-# Source files and their labels
-/home/hong/codeprojects/doge-compiler/build/CMakeFiles/antlr4_runtime-build_static
-/home/hong/codeprojects/doge-compiler/build/CMakeFiles/antlr4_runtime-build_static.rule
-/home/hong/codeprojects/doge-compiler/build/antlr4_runtime/src/antlr4_runtime-stamp/antlr4_runtime-build_static.rule

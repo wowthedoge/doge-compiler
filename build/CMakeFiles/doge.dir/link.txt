@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/doge.dir/main.cpp.o CMakeFiles/doge.dir/antlr4cpp_generated_src/dogeLexer/dogeLexer.cpp.o CMakeFiles/doge.dir/generated/dogeGrammarLexer.cpp.o CMakeFiles/doge.dir/generated/dogeGrammarParser.cpp.o -o doge  antlr4_runtime/src/antlr4_runtime/runtime/Cpp/runtime/libantlr4-runtime.a 
