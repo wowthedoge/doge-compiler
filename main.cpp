@@ -1,11 +1,33 @@
 #include <iostream>
-#include "node.h"
-extern NBlock* programBlock;
-extern int yyparse();
+#include <cstdlib>
+#include <sstream>
+#include "lexer.h"
 
-int main(int argc, char **argv)
+int main()
 {
-    yyparse();
-    std::cout << programBlock << std::endl;
-    return 0;
+  std::string line;
+  while (std::cout << "> " && std::getline(std::cin, line))
+  {
+    std::istringstream currentLine(line);
+    while (!currentLine.eof()) 
+    {
+      int token = lexLine(currentLine);
+      if (token == tok_eof)
+        break;
+      switch (token)
+      {
+      case tok_identifier:
+        std::cout << "Identifier: " << identifierStr << "\n";
+        identifierStr = "";
+        break;
+      case tok_number:
+        std::cout << "Number: " << numVal << "\n";
+        break;
+      default:
+        std::cout << "Character: " << (char)token << "\n";
+        break;
+      }
+    }
+  }
+  return 0;
 }
