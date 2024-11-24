@@ -1,6 +1,6 @@
 # doge-compiler
 
-A compiler written in C++ for learning. Using Flex for lexing, Bison for parsing and LLVM for code generation.
+A compiler written in C++ for learning. Using LLVM for code generation.
 
 Target syntax:
 ```
@@ -23,6 +23,3 @@ printOddAddEven = (arr) {
 
 printOddAddEven (arr)
 ```
-
-18/10/2024: Why is there more Makefile than C++? Because I bit off more than I could chew. Damn. I'm not giving up, I'm coming back another time. I need to properly learn C++ before this shit. Jesus Christ.
-
